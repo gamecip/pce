@@ -16,8 +16,10 @@
         </div>
       </div>
       
-    <div class="container" id="pcejs"></div>
-
+      <div class="pcejs-border">
+        <canvas class="pcejs pcejs-canvas" oncontextmenu="event.preventDefault()"></canvas>
+      </div>
+<!--
     <script type="text/javascript" src="js/pce-deps.js"></script>
     <script type="text/javascript" src="js/pce.js"></script>
     
@@ -32,7 +34,25 @@
         ]
     });
     </script>
+-->
+    <script>
+    Module = {
+        arguments:['-c','pce-config.cfg','-r'],
+        autoloadFiles: [
+          'data/macplus/macplus-pcex.rom',
+          'data/macplus/mac-plus.rom',
+          'data/macplus/hd1.qed',
+          'data/macplus/800K.dsk',
+          'data/macplus/pce-config.cfg',
+        ],
 
+        print: console.log.bind(console),
+  
+        printErr: console.error.bind(console),
+  
+        canvas: document.querySelector('.pcejs-canvas')
+    };
+    </script>
     <script type="text/javascript" src="pce-macplus.js"></script>
   </body>
 </html>

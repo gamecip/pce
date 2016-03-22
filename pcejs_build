@@ -92,7 +92,7 @@ case "$taskname" in
       fi
       $pcejs_build configure em
       $pcejs_build make
-      afterbuild "$PCEJS_conf_target"
+      $pcejs_build afterbuild "$PCEJS_conf_target"
     fi  
 
     pcejs_save_config

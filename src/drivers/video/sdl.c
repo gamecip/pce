@@ -24,6 +24,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include <SDL.h>
 
@@ -661,7 +662,7 @@ int sdl_open (sdl_t *sdl, unsigned w, unsigned h)
 
 	SDL_WM_SetCaption ("pce", "pce");
 	SDL_EnableKeyRepeat (SDL_DEFAULT_REPEAT_DELAY, SDL_DEFAULT_REPEAT_INTERVAL);
-	SDL_EventState (SDL_MOUSEMOTION, SDL_ENABLE);
+	//SDL_EventState (SDL_MOUSEMOTION, SDL_ENABLE);
 
 	sdl_set_window_size (sdl, fx * w + bx, fy * h + by, 0);
 

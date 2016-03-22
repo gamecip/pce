@@ -18,7 +18,6 @@
     }
   ],
   "scripts": {
-    "prepublish": "./pcejs_build",
     "clean": "./pcejs_build clean"
   },
   "homepage": "https://github.com/jsdf/pce",
